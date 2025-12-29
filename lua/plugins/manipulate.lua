@@ -22,7 +22,7 @@ return {
     opts = {}
   },
   {
-    "nvim-telescope/telescope.nvim",
+    'nvim-telescope/telescope.nvim',
     dependencies = {
       "nvim-lua/plenary.nvim",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -35,9 +35,6 @@ return {
       { "<leader>fr", "<cmd>Telescope oldfiles<CR>",              desc = "Recent files" },
       { "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>",  desc = "Document symbols" },
       { "<leader>ws", "<cmd>Telescope lsp_workspace_symbols<CR>", desc = "Workspace symbols" },
-      { "gd",         "<cmd>Telescope lsp_definitions<CR>",       desc = "Go to definition" },
-      { "gr",         "<cmd>Telescope lsp_references<CR>",        desc = "References" },
-      { "gi",         "<cmd>Telescope lsp_implementations<CR>",   desc = "Implementations" },
     },
     config = function()
       local telescope = require("telescope")
@@ -71,6 +68,9 @@ return {
         { "<leader>t", group = "Terminal" },
         { "<leader>l", group = "LSP" },
         { "<leader>h", group = "Hop" },
+        { "s",         desc = "Replace with register" },
+        { "si",        group = "inner" },
+        { "sa",        group = "around" },
       })
     end,
   },
@@ -94,5 +94,22 @@ return {
         },
       }
     end,
+  },
+  {
+    "kana/vim-operator-replace",
+    dependencies = { "kana/vim-operator-user" },
+    keys = {
+      { "s", "<Plug>(operator-replace)", mode = { "n", "x" } },
+    },
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
   }
 }

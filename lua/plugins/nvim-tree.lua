@@ -8,7 +8,7 @@ return {
     opts = {}
   },
   -- tree sitter icons
-  {
-    "nvim-tree/nvim-web-devicons", opts = {}
-  }
+  -- {
+  --   "nvim-tree/nvim-web-devicons", opts = {}
+  -- }
 }

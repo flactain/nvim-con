@@ -26,7 +26,7 @@ return {
     },
     keys = {
       { "<leader>bj", "<cmd>BufferPick<CR>",  desc = "Pick Buffer" },
-      { "<lader>bc",  "<cmd>BufferClose<CR>", desc = "Close Buffer" },
+      { "<leader>bc", "<cmd>BufferClose<CR>", desc = "Close Buffer" },
       { "<leader>bw", "<cmd>w<CR>",           desc = "WriteBuffer" }
 
     },
@@ -34,7 +34,7 @@ return {
   },
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    -- dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
       theme = "jellybeans",
       ignore_focus = "NvimTree"

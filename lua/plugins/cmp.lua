@@ -17,6 +17,9 @@ return {
     -- friendly-snippetsを読み込む
     require("luasnip.loaders.from_vscode").lazy_load()
     local lspkind = require("lspkind")
+    require("luasnip.loaders.from_vscode").lazy_load({
+      paths = { vim.fn.stdpath("config") .. "/lua/plugins/snippets" }
+    })
 
     cmp.setup({
       snippet = {

@@ -1,0 +1,38 @@
+{
+  "Arrow Function": {
+    "prefix": "af",
+    "body": [
+      "() => {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Arrow Function with params": {
+    "prefix": "afp",
+    "body": [
+      "(${1:params}) => {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Arrow Function inline": {
+    "prefix": "afi",
+    "body": "() => $0"
+  },
+  "Async Arrow Function": {
+    "prefix": "aaf",
+    "body": [
+      "async () => {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Async Arrow Function with params": {
+    "prefix": "aafp",
+    "body": [
+      "async (${1:params}) => {",
+      "  $0",
+      "}"
+    ]
+  }
+}
